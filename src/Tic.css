@@ -1,0 +1,87 @@
+/* General Container */
+.game-container {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    max-width: 350px;
+    margin: 0 auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Status Display */
+.status {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Board Styles */
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 10px;
+    margin-bottom: 20px;
+}
+
+.square {
+    width: 100px;
+    height: 100px;
+    font-size: 2.5em;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    background-color: #e7e7e7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Change Background for 'X' and 'O' */
+.square.X {
+    background-color: #ff3b30;
+    color: white;
+}
+
+.square.O {
+    background-color: #34c759;
+    color: white;
+}
+
+/* Hover Effects */
+.square:hover {
+    background-color: #ddd;
+}
+
+/* Reset Button */
+.reset-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.reset-button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 400px) {
+    .game-container {
+        max-width: 280px;
+        padding: 20px;
+    }
+    .square {
+        width: 80px;
+        height: 80px;
+        font-size: 2em;
+    }
+}
